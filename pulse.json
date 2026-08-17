@@ -1,9 +1,0 @@
-{
-  "generated_at": "2026-08-17T06:00:00Z",
-  "services_up": 38,
-  "services_total": 38,
-  "automation_runs_7d": 912,
-  "success_rate_7d": "99.8",
-  "deploys_7d": 14,
-  "daily_runs": [118, 131, 126, 140, 122, 135, 140]
-}
