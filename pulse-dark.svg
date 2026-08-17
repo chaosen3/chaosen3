@@ -1,0 +1,51 @@
+<svg font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" xmlns="http://www.w3.org/2000/svg" width="840" height="208" viewBox="0 0 840 208" role="img" aria-label="Homelab pulse">
+<rect width="840" height="208" rx="10" fill="#0d1117" stroke="#30363d"/>
+<defs><linearGradient id="banner" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset="0.55" stop-color="#2563eb"/><stop offset="1" stop-color="#0891b2"/></linearGradient><clipPath id="top"><rect width="840" height="46" rx="10"/></clipPath></defs>
+<rect width="840" height="46" fill="url(#banner)" clip-path="url(#top)"/>
+<text x="24" y="29" font-size="14" font-weight="700" letter-spacing="1.2" fill="#ffffff">HOMELAB PULSE</text>
+<circle cx="672" cy="24" r="4" fill="#3fb950"/>
+<text x="684" y="29" font-size="11" fill="#e9d5ff">4/4 hosts up</text>
+
+  <g>
+    <rect x="24" y="66" width="186" height="92" rx="8"
+          fill="#161b22" stroke="#30363d"/>
+    <text x="38" y="90" font-size="11" font-weight="600"
+          letter-spacing="0.8" fill="#8b949e">CONTAINERS</text>
+    <text x="38" y="122" font-size="26" font-weight="700"
+          fill="#e6edf3">37</text>
+    <text x="38" y="142" font-size="11" fill="#8b949e">across 4 hosts</text>
+  </g>
+
+  <g>
+    <rect x="220" y="66" width="186" height="92" rx="8"
+          fill="#161b22" stroke="#30363d"/>
+    <text x="234" y="90" font-size="11" font-weight="600"
+          letter-spacing="0.8" fill="#8b949e">LIBRARY</text>
+    <text x="234" y="122" font-size="26" font-weight="700"
+          fill="#e6edf3">41.2 TB</text>
+    <text x="234" y="142" font-size="11" fill="#8b949e">1,486 items</text>
+  </g>
+
+  <g>
+    <rect x="416" y="66" width="186" height="92" rx="8"
+          fill="#161b22" stroke="#30363d"/>
+    <text x="430" y="90" font-size="11" font-weight="600"
+          letter-spacing="0.8" fill="#8b949e">STREAMED</text>
+    <text x="430" y="122" font-size="26" font-weight="700"
+          fill="#e6edf3">63.5</text>
+    <text x="430" y="142" font-size="11" fill="#8b949e">hours, last 7 days</text>
+  </g>
+
+  <g>
+    <rect x="612" y="66" width="186" height="92" rx="8"
+          fill="#161b22" stroke="#30363d"/>
+    <text x="626" y="90" font-size="11" font-weight="600"
+          letter-spacing="0.8" fill="#8b949e">AUTOMATIONS</text>
+    <text x="626" y="122" font-size="26" font-weight="700"
+          fill="#e6edf3">912</text>
+    <text x="626" y="142" font-size="11" fill="#8b949e">n8n runs, last 7 days</text>
+  </g>
+<text x="24" y="180" font-size="10" letter-spacing="0.8" fill="#8b949e">DAILY PLAY HOURS</text>
+<rect x="150.0" y="180.2" width="54.6" height="5.8" rx="2" fill="#1f6f3f"/><rect x="207.6" y="176.3" width="54.6" height="9.7" rx="2" fill="#1f6f3f"/><rect x="265.1" y="180.8" width="54.6" height="5.2" rx="2" fill="#1f6f3f"/><rect x="322.7" y="173.1" width="54.6" height="12.9" rx="2" fill="#1f6f3f"/><rect x="380.3" y="170.7" width="54.6" height="15.3" rx="2" fill="#1f6f3f"/><rect x="437.9" y="166.0" width="54.6" height="20.0" rx="2" fill="#3fb950"/><rect x="495.4" y="167.9" width="54.6" height="18.1" rx="2" fill="#1f6f3f"/>
+<text x="816" y="186" text-anchor="end" font-size="10" fill="#8b949e">updated 2026-08-17T06:00:00Z</text>
+</svg>
