@@ -7,45 +7,23 @@
 <text x="684" y="29" font-size="11" fill="#e9d5ff">all green</text>
 
   <g>
-    <rect x="24" y="66" width="186" height="92" rx="8"
+    <rect x="24.0" y="66" width="391.0" height="92" rx="8"
           fill="#f6f8fa" stroke="#d0d7de"/>
-    <text x="38" y="90" font-size="11" font-weight="600"
+    <text x="38.0" y="90" font-size="11" font-weight="600"
           letter-spacing="0.8" fill="#59636e">SERVICES</text>
-    <text x="38" y="122" font-size="26" font-weight="700"
+    <text x="38.0" y="122" font-size="26" font-weight="700"
           fill="#1f2328">49/49</text>
-    <text x="38" y="142" font-size="11" fill="#59636e">healthy</text>
+    <text x="38.0" y="142" font-size="11" fill="#59636e">healthy</text>
   </g>
 
   <g>
-    <rect x="220" y="66" width="186" height="92" rx="8"
+    <rect x="425.0" y="66" width="391.0" height="92" rx="8"
           fill="#f6f8fa" stroke="#d0d7de"/>
-    <text x="234" y="90" font-size="11" font-weight="600"
-          letter-spacing="0.8" fill="#59636e">AUTOMATIONS</text>
-    <text x="234" y="122" font-size="26" font-weight="700"
-          fill="#1f2328">-</text>
-    <text x="234" y="142" font-size="11" fill="#59636e">runs, last 7 days</text>
-  </g>
-
-  <g>
-    <rect x="416" y="66" width="186" height="92" rx="8"
-          fill="#f6f8fa" stroke="#d0d7de"/>
-    <text x="430" y="90" font-size="11" font-weight="600"
-          letter-spacing="0.8" fill="#59636e">SUCCESS RATE</text>
-    <text x="430" y="122" font-size="26" font-weight="700"
-          fill="#1f2328">-%</text>
-    <text x="430" y="142" font-size="11" fill="#59636e">last 7 days</text>
-  </g>
-
-  <g>
-    <rect x="612" y="66" width="186" height="92" rx="8"
-          fill="#f6f8fa" stroke="#d0d7de"/>
-    <text x="626" y="90" font-size="11" font-weight="600"
+    <text x="439.0" y="90" font-size="11" font-weight="600"
           letter-spacing="0.8" fill="#59636e">DEPLOYS</text>
-    <text x="626" y="122" font-size="26" font-weight="700"
+    <text x="439.0" y="122" font-size="26" font-weight="700"
           fill="#1f2328">0</text>
-    <text x="626" y="142" font-size="11" fill="#59636e">last 7 days</text>
+    <text x="439.0" y="142" font-size="11" fill="#59636e">last 7 days</text>
   </g>
-<text x="24" y="180" font-size="10" letter-spacing="0.8" fill="#59636e">AUTOMATION RUNS / DAY</text>
-
 <text x="816" y="186" text-anchor="end" font-size="10" fill="#59636e">updated 2026-08-17T22:00:00Z</text>
 </svg>
