@@ -4,48 +4,48 @@
 <rect width="840" height="46" fill="url(#banner)" clip-path="url(#top)"/>
 <text x="24" y="29" font-size="14" font-weight="700" letter-spacing="1.2" fill="#ffffff">HOMELAB PULSE</text>
 <circle cx="672" cy="24" r="4" fill="#1a7f37"/>
-<text x="684" y="29" font-size="11" fill="#e9d5ff">4/4 hosts up</text>
+<text x="684" y="29" font-size="11" fill="#e9d5ff">all green</text>
 
   <g>
     <rect x="24" y="66" width="186" height="92" rx="8"
           fill="#f6f8fa" stroke="#d0d7de"/>
     <text x="38" y="90" font-size="11" font-weight="600"
-          letter-spacing="0.8" fill="#59636e">CONTAINERS</text>
+          letter-spacing="0.8" fill="#59636e">SERVICES</text>
     <text x="38" y="122" font-size="26" font-weight="700"
-          fill="#1f2328">37</text>
-    <text x="38" y="142" font-size="11" fill="#59636e">across 4 hosts</text>
+          fill="#1f2328">38/38</text>
+    <text x="38" y="142" font-size="11" fill="#59636e">healthy</text>
   </g>
 
   <g>
     <rect x="220" y="66" width="186" height="92" rx="8"
           fill="#f6f8fa" stroke="#d0d7de"/>
     <text x="234" y="90" font-size="11" font-weight="600"
-          letter-spacing="0.8" fill="#59636e">LIBRARY</text>
+          letter-spacing="0.8" fill="#59636e">AUTOMATIONS</text>
     <text x="234" y="122" font-size="26" font-weight="700"
-          fill="#1f2328">41.2 TB</text>
-    <text x="234" y="142" font-size="11" fill="#59636e">1,486 items</text>
+          fill="#1f2328">912</text>
+    <text x="234" y="142" font-size="11" fill="#59636e">runs, last 7 days</text>
   </g>
 
   <g>
     <rect x="416" y="66" width="186" height="92" rx="8"
           fill="#f6f8fa" stroke="#d0d7de"/>
     <text x="430" y="90" font-size="11" font-weight="600"
-          letter-spacing="0.8" fill="#59636e">STREAMED</text>
+          letter-spacing="0.8" fill="#59636e">SUCCESS RATE</text>
     <text x="430" y="122" font-size="26" font-weight="700"
-          fill="#1f2328">63.5</text>
-    <text x="430" y="142" font-size="11" fill="#59636e">hours, last 7 days</text>
+          fill="#1f2328">99.8%</text>
+    <text x="430" y="142" font-size="11" fill="#59636e">last 7 days</text>
   </g>
 
   <g>
     <rect x="612" y="66" width="186" height="92" rx="8"
           fill="#f6f8fa" stroke="#d0d7de"/>
     <text x="626" y="90" font-size="11" font-weight="600"
-          letter-spacing="0.8" fill="#59636e">AUTOMATIONS</text>
+          letter-spacing="0.8" fill="#59636e">DEPLOYS</text>
     <text x="626" y="122" font-size="26" font-weight="700"
-          fill="#1f2328">912</text>
-    <text x="626" y="142" font-size="11" fill="#59636e">n8n runs, last 7 days</text>
+          fill="#1f2328">14</text>
+    <text x="626" y="142" font-size="11" fill="#59636e">last 7 days</text>
   </g>
-<text x="24" y="180" font-size="10" letter-spacing="0.8" fill="#59636e">DAILY PLAY HOURS</text>
-<rect x="150.0" y="180.2" width="54.6" height="5.8" rx="2" fill="#aceebb"/><rect x="207.6" y="176.3" width="54.6" height="9.7" rx="2" fill="#aceebb"/><rect x="265.1" y="180.8" width="54.6" height="5.2" rx="2" fill="#aceebb"/><rect x="322.7" y="173.1" width="54.6" height="12.9" rx="2" fill="#aceebb"/><rect x="380.3" y="170.7" width="54.6" height="15.3" rx="2" fill="#aceebb"/><rect x="437.9" y="166.0" width="54.6" height="20.0" rx="2" fill="#1a7f37"/><rect x="495.4" y="167.9" width="54.6" height="18.1" rx="2" fill="#aceebb"/>
+<text x="24" y="180" font-size="10" letter-spacing="0.8" fill="#59636e">AUTOMATION RUNS / DAY</text>
+<rect x="190.0" y="169.1" width="48.9" height="16.9" rx="2" fill="#aceebb"/><rect x="241.9" y="167.3" width="48.9" height="18.7" rx="2" fill="#aceebb"/><rect x="293.7" y="168.0" width="48.9" height="18.0" rx="2" fill="#aceebb"/><rect x="345.6" y="166.0" width="48.9" height="20.0" rx="2" fill="#1a7f37"/><rect x="397.4" y="168.6" width="48.9" height="17.4" rx="2" fill="#aceebb"/><rect x="449.3" y="166.7" width="48.9" height="19.3" rx="2" fill="#aceebb"/><rect x="501.1" y="166.0" width="48.9" height="20.0" rx="2" fill="#1a7f37"/>
 <text x="816" y="186" text-anchor="end" font-size="10" fill="#59636e">updated 2026-08-17T06:00:00Z</text>
 </svg>

@@ -95,16 +95,18 @@ def sparkline(x: int, y: int, w: int, h: int, series: list, t: dict) -> str:
 def card(d: dict, theme: str) -> str:
     t = THEMES[theme]
     stamp = d.get("generated_at", datetime.now(timezone.utc).isoformat(timespec="seconds"))
-    hosts_up = d.get("hosts_up", 0)
-    hosts_total = d.get("hosts_total", 0)
-    ratio = (hosts_up / hosts_total) if hosts_total else 0
-    health = t["bar"] if ratio == 1 else (t["accent"] if ratio >= 0.75 else "#d29922")
+    up = d.get("services_up", 0)
+    total = d.get("services_total", 0)
+    ratio = (up / total) if total else 0
+    health = t["bar"] if ratio == 1 else (t["accent"] if ratio >= 0.9 else "#d29922")
 
+    # Deliberately no counts, sizes, or timings that describe the person rather
+    # than the systems. Nothing here reveals presence, location, or contents.
     tiles = [
-        ("containers", d.get("containers_running", "-"), f"across {hosts_total} hosts"),
-        ("library", d.get("library_size", "-"), f"{d.get('library_items', '-')} items"),
-        ("streamed", d.get("watch_hours_7d", "-"), "hours, last 7 days"),
-        ("automations", d.get("workflow_runs_7d", "-"), "n8n runs, last 7 days"),
+        ("services", f"{up}/{total}", "healthy"),
+        ("automations", d.get("automation_runs_7d", "-"), "runs, last 7 days"),
+        ("success rate", f"{d.get('success_rate_7d', '-')}%", "last 7 days"),
+        ("deploys", d.get("deploys_7d", "-"), "last 7 days"),
     ]
 
     tw, th = 186, 92
@@ -122,7 +124,7 @@ def card(d: dict, theme: str) -> str:
         'fill="#ffffff">HOMELAB PULSE</text>',
         f'<circle cx="{W - 168}" cy="24" r="4" fill="{health}"/>',
         f'<text x="{W - 156}" y="29" font-size="11" fill="#e9d5ff">'
-        f'{hosts_up}/{hosts_total} hosts up</text>',
+        f'{"all green" if ratio == 1 else "degraded"}</text>',
     ]
 
     for i, (label, value, sub) in enumerate(tiles):
@@ -130,9 +132,9 @@ def card(d: dict, theme: str) -> str:
 
     parts.append(
         f'<text x="24" y="180" font-size="10" letter-spacing="0.8" '
-        f'fill="{t["muted"]}">DAILY PLAY HOURS</text>'
+        f'fill="{t["muted"]}">AUTOMATION RUNS / DAY</text>'
     )
-    parts.append(sparkline(150, 166, 400, 20, d.get("daily_hours", []), t))
+    parts.append(sparkline(190, 166, 360, 20, d.get("daily_runs", []), t))
     parts.append(
         f'<text x="{W - 24}" y="186" text-anchor="end" font-size="10" '
         f'fill="{t["muted"]}">updated {esc(stamp)}</text>'
