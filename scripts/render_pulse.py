@@ -60,16 +60,16 @@ def esc(s: object) -> str:
     )
 
 
-def tile(x: int, y: int, w: int, h: int, label: str, value: str, sub: str, t: dict) -> str:
+def tile(x: float, y: int, w: float, h: int, label: str, value: str, sub: str, t: dict) -> str:
     return f"""
   <g>
-    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8"
+    <rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{h}" rx="8"
           fill="{t['tile']}" stroke="{t['stroke']}"/>
-    <text x="{x + 14}" y="{y + 24}" font-size="11" font-weight="600"
+    <text x="{x + 14:.1f}" y="{y + 24}" font-size="11" font-weight="600"
           letter-spacing="0.8" fill="{t['muted']}">{esc(label.upper())}</text>
-    <text x="{x + 14}" y="{y + 56}" font-size="26" font-weight="700"
+    <text x="{x + 14:.1f}" y="{y + 56}" font-size="26" font-weight="700"
           fill="{t['text']}">{esc(value)}</text>
-    <text x="{x + 14}" y="{y + 76}" font-size="11" fill="{t['muted']}">{esc(sub)}</text>
+    <text x="{x + 14:.1f}" y="{y + 76}" font-size="11" fill="{t['muted']}">{esc(sub)}</text>
   </g>"""
 
 
@@ -102,15 +102,26 @@ def card(d: dict, theme: str) -> str:
 
     # Deliberately no counts, sizes, or timings that describe the person rather
     # than the systems. Nothing here reveals presence, location, or contents.
-    tiles = [
-        ("services", f"{up}/{total}", "healthy"),
-        ("automations", d.get("automation_runs_7d", "-"), "runs, last 7 days"),
-        ("success rate", f"{d.get('success_rate_7d', '-')}%", "last 7 days"),
-        ("deploys", d.get("deploys_7d", "-"), "last 7 days"),
+    #
+    # Tiles are built only from metrics actually present in the payload. A fresh
+    # instance with no execution history should render a narrower honest card,
+    # not four tiles of zeroes that read as broken.
+    candidates = [
+        ("services", total is not None and total > 0, f"{up}/{total}", "healthy"),
+        ("automations", d.get("automation_runs_7d") is not None,
+         d.get("automation_runs_7d"), "runs, last 7 days"),
+        ("success rate", d.get("success_rate_7d") is not None,
+         f"{d.get('success_rate_7d')}%", "last 7 days"),
+        ("deploys", d.get("deploys_7d") is not None,
+         d.get("deploys_7d"), "last 7 days"),
     ]
+    tiles = [(label, val, sub) for label, present, val, sub in candidates if present]
+    if not tiles:
+        tiles = [("status", "up", "no metrics reported")]
 
-    tw, th = 186, 92
-    gap = 32
+    # Fill the available width with however many tiles survived.
+    th, gap, pad = 92, 10, 24
+    tw = (W - 2 * pad - gap * (len(tiles) - 1)) / len(tiles)
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
         f'viewBox="0 0 {W} {H}" role="img" aria-label="Homelab pulse">',
@@ -128,15 +139,17 @@ def card(d: dict, theme: str) -> str:
     ]
 
     for i, (label, value, sub) in enumerate(tiles):
-        parts.append(tile(24 + i * (tw + 10), 66, tw, th, label, value, sub, t))
+        parts.append(tile(pad + i * (tw + gap), 66, tw, th, label, value, sub, t))
 
+    series = [v for v in (d.get("daily_runs") or []) if v]
+    if series:
+        parts.append(
+            f'<text x="{pad}" y="180" font-size="10" letter-spacing="0.8" '
+            f'fill="{t["muted"]}">AUTOMATION RUNS / DAY</text>'
+        )
+        parts.append(sparkline(190, 166, 360, 20, d.get("daily_runs"), t))
     parts.append(
-        f'<text x="24" y="180" font-size="10" letter-spacing="0.8" '
-        f'fill="{t["muted"]}">AUTOMATION RUNS / DAY</text>'
-    )
-    parts.append(sparkline(190, 166, 360, 20, d.get("daily_runs", []), t))
-    parts.append(
-        f'<text x="{W - 24}" y="186" text-anchor="end" font-size="10" '
+        f'<text x="{W - pad}" y="186" text-anchor="end" font-size="10" '
         f'fill="{t["muted"]}">updated {esc(stamp)}</text>'
     )
     parts.append("</svg>")
