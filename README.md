@@ -9,8 +9,8 @@
 <!-- pulse:start -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=20260825030000">
-    <img alt="Homelab pulse" src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=20260825030000" width="840">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=20260826030000">
+    <img alt="Homelab pulse" src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=20260826030000" width="840">
   </picture>
 </p>
 <!-- pulse:end -->
