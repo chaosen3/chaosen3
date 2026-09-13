@@ -15,11 +15,17 @@
 </p>
 <!-- pulse:end -->
 
+### Now
+
+Running a London-themed roleplay server on GTA V Enhanced (FiveM) with a custom framework and three contributors, and reviewing every change through a multi-model loop: one model orchestrates, others research, build and try to break the result, and two outside models review blind. The server repo is private; the tooling that came out of it is described below.
+
 ### Projects
 
 | Project | Stack | Notes |
 |---|---|---|
-| **MailTools** | React, Node, Docker | SPF, DKIM and DMARC evaluation, DNS and RBL lookups, header parsing, aggregate report ingestion |
+| **MailTools** | React, Node, Docker | SPF, DKIM and DMARC evaluation, DNS and RBL lookups, header parsing, aggregate report ingestion. In production; private. |
+| **Dank City** | Lua, Python, Docker, GitHub Actions | FiveM server on GTA V Enhanced: custom framework, London map work, in-game radio with a synced programme. Private. |
+| **Preflight for FiveM** | Python (stdlib) | Repo-wide gate for a FiveM tree: CfxLua parsing, manifest and dependency-cycle walk, RSC7 asset-version scan, ymap streaming-extents parse, cross-resource duplicate detection. Runs on every PR. |
 | **Workflow automation** | n8n, JS, REST | API orchestration and scheduled reporting pipelines |
 | **Agent tooling** | Python | Tool-calling loop built from primitives rather than a framework |
 | **Deploy scripting** | PowerShell, Bash | Idempotent installers with layered transport fallback and structured logging |
