@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-13T03:00:00Z",
-  "services_up": 53,
-  "services_total": 53,
+  "generated_at": "2026-10-14T03:00:00Z",
+  "services_up": 49,
+  "services_total": 49,
   "automation_runs_7d": 6,
   "success_rate_7d": "100.0",
   "deploys_7d": 0,
