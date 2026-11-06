@@ -1,10 +1,43 @@
-<h1 align="center">chaosen3</h1>
+# chaosen3
 
-<p align="center">
-  <img src="https://img.shields.io/badge/agents%20%26%20orchestration-7c3aed?style=flat-square" alt="agents and orchestration">
-  <img src="https://img.shields.io/badge/n8n%20%C2%B7%20Docker%20%C2%B7%20Python%20%C2%B7%20Node-2563eb?style=flat-square" alt="stack">
-  <img src="https://img.shields.io/badge/self--hosted-0891b2?style=flat-square" alt="self-hosted">
-</p>
+AI and automation engineer, with a background in Microsoft 365, infrastructure and PowerShell.
+
+My projects cover email diagnostics, media serving and game-server tooling. I also run the Linux and Docker infrastructure behind them, including local GPU inference, storage, networking and deployment.
+
+## Selected work
+
+### [MailTools](https://mailtools.hashemlabs.com)
+Email deliverability and DNS diagnostics, with free tools for SPF, DKIM, DMARC, TLS, blocklists and message analysis. Includes DMARC and TLS-RPT report ingestion, monitoring and alerting.
+
+Its Deliverability Reasoning Engine runs diagnostic checks first, then uses a local model to explain the findings. A 31-case evaluation harness checks the explanations against the diagnostic engine.
+
+**React · Node.js · PostgreSQL · Docker** · In production · Source private
+
+### Viewarr
+A self-hosted media server built in Go and Next.js. Handles library scanning, metadata, artwork, playback, transcoding, subtitles, watch history and user permissions.
+
+The scanner protects the catalogue when a NAS mount disappears: an unexpectedly empty scan leaves existing records intact and reports the failure.
+
+**Go · Next.js · SQLite · FFmpeg** · Self-hosted · Source private
+
+### Dank City
+A London-themed FiveM roleplay server on GTA V Enhanced, developed by a three-person team. Work includes the custom framework, resource integration, in-game interfaces and synchronised radio.
+
+The supporting **Preflight** tooling checks CfxLua syntax, manifests, dependency cycles, asset versions, map streaming extents and duplicates across resources on every pull request.
+
+**Lua · Python · Docker · GitHub Actions** · Source private
+
+## Infrastructure & automation
+
+- **Self-hosting:** Linux hosts managed through Portainer, NAS-backed storage, reverse proxies, Cloudflare tunnels and Tailscale.
+- **Networking:** UniFi, local DNS and a dedicated VLAN routed through a WireGuard VPN gateway.
+- **Local inference:** llama.cpp with Vulkan on an AMD GPU, including the model serving MailTools.
+- **Automation:** n8n and JavaScript for API workflows and reporting; PowerShell and Bash for deployment.
+- **Development tooling:** Python agent loops, separate implementation and review stages, and automated checks on pull requests.
+
+## Homelab pulse
+
+Service health and recent automation activity, published from the homelab.
 
 <!-- pulse:start -->
 <p align="center">
@@ -15,37 +48,17 @@
 </p>
 <!-- pulse:end -->
 
-### Now
+[Renderer](https://github.com/chaosen3/chaosen3/blob/main/scripts/render_pulse.py) · [Workflow](https://github.com/chaosen3/chaosen3/blob/main/.github/workflows/pulse.yml) · [Latest data](https://github.com/chaosen3/chaosen3/blob/main/data/pulse.json)
 
-Running a London-themed roleplay server on GTA V Enhanced (FiveM) with a custom framework and three contributors, and reviewing every change through a multi-model loop: one model orchestrates, others research, build and try to break the result, and two outside models review blind. The server repo is private; the tooling that came out of it is described below.
+<details>
+<summary>How the pulse is generated</summary>
 
-### Projects
+A scheduled job pushes a JSON snapshot to this repository. GitHub Actions renders the light and dark SVGs using Python's standard library and updates the image URLs in this README.
 
-| Project | Stack | Notes |
-|---|---|---|
-| **MailTools** | React, Node, Docker | SPF, DKIM and DMARC evaluation, DNS and RBL lookups, header parsing, aggregate report ingestion. In production; private. |
-| **Dank City** | Lua, Python, Docker, GitHub Actions | FiveM server on GTA V Enhanced: custom framework, London map work, in-game radio with a synced programme. Private. |
-| **Preflight for FiveM** | Python (stdlib) | Repo-wide gate for a FiveM tree: CfxLua parsing, manifest and dependency-cycle walk, RSC7 asset-version scan, ymap streaming-extents parse, cross-resource duplicate detection. Runs on every PR. |
-| **Workflow automation** | n8n, JS, REST | API orchestration and scheduled reporting pipelines |
-| **Agent tooling** | Python | Tool-calling loop built from primitives rather than a framework |
-| **Deploy scripting** | PowerShell, Bash | Idempotent installers with layered transport fallback and structured logging |
-
-### Pulse pipeline
-
-```
-scheduled job ──▶ pulse.json ──▶ GitHub contents API
-                                        │
-                              push: data/pulse.json
-                                        ▼
-                              render_pulse.py (Actions)
-                                        │
-                          ┌─────────────┴─────────────┐
-                          ▼                           ▼
-                 assets/pulse-*.svg          README block rewrite
+```text
+Homelab → data/pulse.json → GitHub Actions → SVG cards → Profile
 ```
 
-Push-only, so nothing accepts inbound connections and no external service holds a token. SVG is generated in-repo, themed via `<picture>` and `prefers-color-scheme`, and cache-busted with a query parameter because README images are proxied and cached by URL.
+The homelab only makes outbound connections for this pipeline. The cards support light and dark themes, and timestamped image URLs refresh GitHub's cached copies when new data arrives.
 
-- Renderer: [`scripts/render_pulse.py`](scripts/render_pulse.py) — stdlib only
-- Workflow: [`.github/workflows/pulse.yml`](.github/workflows/pulse.yml)
-- Schema: [`data/pulse.json`](data/pulse.json)
+</details>
