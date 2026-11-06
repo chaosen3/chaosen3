@@ -1,64 +1,63 @@
-# chaosen3
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/profile-dark-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/profile-dark.svg">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/profile-light-mobile.svg">
+  <img alt="chaosen3 — AI &amp; automation · Software &amp; systems" src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/profile-light.svg" width="840">
+</picture>
 
-AI and automation engineer, with a background in Microsoft 365, infrastructure and PowerShell.
+AI and automation engineer with a background in Microsoft 365, infrastructure and PowerShell. Building tools for email diagnostics, media and game servers.
 
-My projects cover email diagnostics, media serving and game-server tooling. I also run the Linux and Docker infrastructure behind them, including local GPU inference, storage, networking and deployment.
+<br>
 
 ## Selected work
 
-### [MailTools](https://mailtools.hashemlabs.com)
-Email deliverability and DNS diagnostics, with free tools for SPF, DKIM, DMARC, TLS, blocklists and message analysis. Includes DMARC and TLS-RPT report ingestion, monitoring and alerting.
+### [MailTools ↗](https://mailtools.hashemlabs.com)
 
-Its Deliverability Reasoning Engine runs diagnostic checks first, then uses a local model to explain the findings. A 31-case evaluation harness checks the explanations against the diagnostic engine.
+Email deliverability and DNS diagnostics, from SPF, DKIM and DMARC to TLS, blocklists and message analysis. Includes report ingestion, monitoring and alerting.
 
-**React · Node.js · PostgreSQL · Docker** · In production · Source private
+The reasoning engine explains results from deterministic checks. A **31-case evaluation harness** checks those explanations against the diagnostic engine.
+
+<sub>React · Node.js · PostgreSQL<br>In production · Source private</sub>
+
+---
 
 ### Viewarr
-A self-hosted media server built in Go and Next.js. Handles library scanning, metadata, artwork, playback, transcoding, subtitles, watch history and user permissions.
 
-The scanner protects the catalogue when a NAS mount disappears: an unexpectedly empty scan leaves existing records intact and reports the failure.
+A media server built in Go and Next.js, covering library scanning, metadata, playback, transcoding, subtitles and watch history. Designed to preserve the catalogue when media storage becomes unavailable.
 
-**Go · Next.js · SQLite · FFmpeg** · Self-hosted · Source private
+<sub>Go · Next.js · SQLite · FFmpeg &nbsp; / &nbsp; Source private</sub>
+
+---
 
 ### Dank City
-A London-themed FiveM roleplay server on GTA V Enhanced, developed by a three-person team. Work includes the custom framework, resource integration, in-game interfaces and synchronised radio.
 
-The supporting **Preflight** tooling checks CfxLua syntax, manifests, dependency cycles, asset versions, map streaming extents and duplicates across resources on every pull request.
+A London-themed FiveM roleplay server on GTA V Enhanced, developed by a three-person team. Custom framework, resource integration, in-game interfaces and synchronised radio.
 
-**Lua · Python · Docker · GitHub Actions** · Source private
+Its **Preflight** tooling validates syntax, dependencies, assets and map streaming extents on every pull request.
 
-## Infrastructure & automation
+<sub>Lua · Python · GitHub Actions &nbsp; / &nbsp; Source private</sub>
 
-- **Self-hosting:** Linux hosts managed through Portainer, NAS-backed storage, reverse proxies, Cloudflare tunnels and Tailscale.
-- **Networking:** UniFi, local DNS and a dedicated VLAN routed through a WireGuard VPN gateway.
-- **Local inference:** llama.cpp with Vulkan on an AMD GPU, including the model serving MailTools.
-- **Automation:** n8n and JavaScript for API workflows and reporting; PowerShell and Bash for deployment.
-- **Development tooling:** Python agent loops, separate implementation and review stages, and automated checks on pull requests.
+<br>
 
 ## Homelab pulse
 
-Service health and recent automation activity, published from the homelab.
+Service health and automation activity from the latest published snapshot.
 
 <!-- pulse:start -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=20261106040000">
-    <img alt="Homelab pulse" src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=20261106040000" width="840">
-  </picture>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark-mobile.svg?v=2-20261106040000">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=2-20261106040000">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light-mobile.svg?v=2-20261106040000">
+  <img alt="Homelab pulse: service health, automation runs, execution success and deployments; collection time shown in the panel" src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=2-20261106040000" width="840">
+</picture>
 <!-- pulse:end -->
 
-[Renderer](https://github.com/chaosen3/chaosen3/blob/main/scripts/render_pulse.py) · [Workflow](https://github.com/chaosen3/chaosen3/blob/main/.github/workflows/pulse.yml) · [Latest data](https://github.com/chaosen3/chaosen3/blob/main/data/pulse.json)
-
 <details>
-<summary>How the pulse is generated</summary>
+<summary>About these numbers</summary>
 
-A scheduled job pushes a JSON snapshot to this repository. GitHub Actions renders the light and dark SVGs using Python's standard library and updates the image URLs in this README.
+The snapshot records healthy services, automation runs, execution success rate and deployments. Activity figures cover the preceding seven days; the timestamp shows when the data was collected.
 
-```text
-Homelab → data/pulse.json → GitHub Actions → SVG cards → Profile
-```
-
-The homelab only makes outbound connections for this pipeline. The cards support light and dark themes, and timestamped image URLs refresh GitHub's cached copies when new data arrives.
+[Renderer](https://github.com/chaosen3/chaosen3/blob/main/scripts/render_pulse.py) · [Snapshot](https://github.com/chaosen3/chaosen3/blob/main/data/pulse.json)
 
 </details>
+

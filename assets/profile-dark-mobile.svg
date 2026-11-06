@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="150" viewBox="0 0 420 150" role="img" aria-labelledby="title desc">
+<title id="title">chaosen3</title>
+<desc id="desc">AI and automation. Software and systems.</desc>
+<rect width="420" height="150" fill="#0d1117"/>
+<text x="0" y="86" fill="#ecf2f8" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="72" font-weight="650" letter-spacing="-3">chaosen3<tspan fill="#7cabf5">.</tspan></text>
+<text x="3" y="123" fill="#99a8b9" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="16">AI &amp; automation<tspan dx="12" fill="#303b49">/</tspan><tspan dx="12">Software &amp; systems</tspan></text>
+<path d="M3 149H420" stroke="#303b49"/>
+<path d="M3 149H104" stroke="#7cabf5" stroke-width="2"/>
+</svg>
