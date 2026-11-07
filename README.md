@@ -43,6 +43,15 @@ All three repositories are private. Check results refer to the current default-b
 
 <br>
 
+### [Viewarr demo ↗](demos/viewarr/README.md)
+
+[![Viewarr’s movie library with fictional titles and procedural artwork](assets/viewarr-library.png)](demos/viewarr/README.md)
+
+<sub>Browse, filter and resume · synthetic library · simulated playback · [watch the demo](demos/viewarr/README.md)</sub>
+
+<br>
+
+
 ### [MailTools in use ↗](https://mailtools.hashemlabs.com)
 
 [![MailTools Domain Audit showing SPF, DKIM and DMARC checks for example.com](assets/mailtools-audit.png)](https://mailtools.hashemlabs.com)
