@@ -35,6 +35,14 @@ All three repositories are private. Check results refer to the current default-b
 
 <br>
 
+## Public code and notes
+
+**[scan-guard](https://github.com/chaosen3/scan-guard)** · A small Go package and CLI that refuses incomplete scans and unexpected empty results before inventory reconciliation. Adapted from Viewarr.
+
+[Why an empty scan should not clear a catalogue](https://github.com/chaosen3/scan-guard/blob/main/docs/empty-scans.md) · The failure mode, the guard and its trade-offs.
+
+<br>
+
 ### [MailTools in use ↗](https://mailtools.hashemlabs.com)
 
 [![MailTools Domain Audit showing SPF, DKIM and DMARC checks for example.com](assets/mailtools-audit.png)](https://mailtools.hashemlabs.com)
