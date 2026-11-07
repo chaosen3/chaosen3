@@ -1,42 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="282" viewBox="0 0 840 282" role="img" aria-labelledby="title desc" font-family="Segoe UI,Helvetica,Arial,sans-serif">
-<title id="title">Homelab pulse</title>
-<desc id="desc">Services healthy: 53 / 53 (at snapshot); Automation runs: 6 (last 7 days); Execution success: 83.3% (last 7 days); Deployments: 0 (last 7 days)</desc>
-<rect x="0.5" y="0.5" width="839" height="281" rx="12" fill="#0d1117" stroke="#303b49"/>
-<text x="24" y="32" fill="#ecf2f8" font-size="18" font-weight="600" text-anchor="start">Homelab pulse</text>
-<text x="816" y="32" fill="#69c69c" font-size="12" font-weight="400" text-anchor="end">Services healthy</text>
-<text x="24.0" y="77" fill="#99a8b9" font-size="12" font-weight="400" text-anchor="start">Services healthy</text>
-<text x="24.0" y="112" fill="#69c69c" font-size="36" font-weight="600" text-anchor="start">53 / 53</text>
-<text x="24.0" y="132" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">at snapshot</text>
-<text x="222.0" y="77" fill="#99a8b9" font-size="12" font-weight="400" text-anchor="start">Automation runs</text>
-<text x="222.0" y="112" fill="#ecf2f8" font-size="36" font-weight="600" text-anchor="start">6</text>
-<text x="222.0" y="132" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">last 7 days</text>
-<text x="420.0" y="77" fill="#99a8b9" font-size="12" font-weight="400" text-anchor="start">Execution success</text>
-<text x="420.0" y="112" fill="#ecf2f8" font-size="36" font-weight="600" text-anchor="start">83.3%</text>
-<text x="420.0" y="132" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">last 7 days</text>
-<text x="618.0" y="77" fill="#99a8b9" font-size="12" font-weight="400" text-anchor="start">Deployments</text>
-<text x="618.0" y="112" fill="#ecf2f8" font-size="36" font-weight="600" text-anchor="start">0</text>
-<text x="618.0" y="132" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">last 7 days</text>
-<path d="M24 158H816" stroke="#303b49"/>
-<text x="24" y="182" fill="#99a8b9" font-size="12" font-weight="400" text-anchor="start">Automation runs / day</text>
-<rect x="24.0" y="231" width="105.1" height="1" fill="#303b49"/>
-<rect x="24.0" y="207.0" width="105.1" height="24.0" rx="2" fill="#7cabf5"/>
-<text x="76.6" y="201.0" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="middle">1</text>
-<rect x="137.1" y="231" width="105.1" height="1" fill="#303b49"/>
-<rect x="137.1" y="207.0" width="105.1" height="24.0" rx="2" fill="#7cabf5"/>
-<text x="189.7" y="201.0" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="middle">1</text>
-<rect x="250.3" y="231" width="105.1" height="1" fill="#303b49"/>
-<rect x="250.3" y="207.0" width="105.1" height="24.0" rx="2" fill="#7cabf5"/>
-<text x="302.9" y="201.0" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="middle">1</text>
-<rect x="363.4" y="231" width="105.1" height="1" fill="#303b49"/>
-<rect x="363.4" y="207.0" width="105.1" height="24.0" rx="2" fill="#7cabf5"/>
-<text x="416.0" y="201.0" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="middle">1</text>
-<rect x="476.6" y="231" width="105.1" height="1" fill="#303b49"/>
-<rect x="476.6" y="207.0" width="105.1" height="24.0" rx="2" fill="#7cabf5"/>
-<text x="529.1" y="201.0" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="middle">1</text>
-<rect x="589.7" y="231" width="105.1" height="1" fill="#303b49"/>
-<rect x="589.7" y="207.0" width="105.1" height="24.0" rx="2" fill="#7cabf5"/>
-<text x="642.3" y="201.0" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="middle">1</text>
-<rect x="702.9" y="231" width="105.1" height="1" fill="#303b49"/>
-<text x="755.4" y="225.0" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="middle">0</text>
-<text x="24" y="263" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">Snapshot · 06 Nov 2026 · 04:00 UTC</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="100" viewBox="0 0 840 100" role="img" aria-labelledby="title desc" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<title id="title">Infrastructure snapshot</title>
+<desc id="desc">Running container counts, not application health or uptime.</desc>
+<rect width="840" height="100" fill="#0d1117"/>
+<path d="M0 1H840" stroke="#303b49"/>
+<text x="0" y="30" fill="#ecf2f8" font-size="15" font-weight="600" text-anchor="start">57 / 57 containers running</text>
+<text x="0" y="52" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">Observed 07 Nov 2026 · daily snapshot</text>
+<text x="840" y="30" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="end">0 completed automation runs · 7 days</text>
+<text x="0" y="84" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">Container state only; no health or uptime claim.</text>
 </svg>

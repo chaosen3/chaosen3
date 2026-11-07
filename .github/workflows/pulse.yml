@@ -1,11 +1,10 @@
-name: Render homelab pulse
+name: Render profile signals
 
 on:
   push:
     paths:
       - "data/pulse.json"
-      - "scripts/render_pulse.py"
-      - "scripts/test_render_pulse.py"
+      - "scripts/*.py"
       - ".github/workflows/pulse.yml"
   schedule:
     - cron: "17 6 * * *"
@@ -43,5 +42,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets README.md
-          git commit -m "chore: refresh homelab pulse [skip ci]"
+          git commit -m "chore: refresh profile signals [skip ci]"
           git push

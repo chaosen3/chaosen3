@@ -11,53 +11,58 @@ AI and automation engineer with a background in Microsoft 365, infrastructure an
 
 ## Selected work
 
-### [MailTools ↗](https://mailtools.hashemlabs.com)
+<!-- projects:start -->
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark-mobile.svg?v=3-e702a437c157">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark.svg?v=3-e702a437c157">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light-mobile.svg?v=3-e702a437c157">
+  <img alt="MailTools, Viewarr and Dank City: project checks and 30 days of merged pull requests." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light.svg?v=3-e702a437c157" width="840">
+</picture>
+<!-- projects:end -->
 
-Email deliverability and DNS diagnostics, from SPF, DKIM and DMARC to TLS, blocklists and message analysis. Includes report ingestion, monitoring and alerting.
+<details>
+<summary>Project notes</summary>
 
-The reasoning engine explains results from deterministic checks. A **31-case evaluation harness** checks those explanations against the diagnostic engine.
+**[MailTools](https://mailtools.hashemlabs.com)** covers email deliverability and DNS diagnostics, report ingestion, monitoring and alerting. Its reasoning engine explains deterministic checks, with a 31-case evaluation harness for those explanations.
 
-<sub>React · Node.js · PostgreSQL<br>In production · Source private</sub>
+**Viewarr** owns library scanning, metadata, playback, transcoding, subtitles and watch history. It preserves the catalogue when media storage becomes unavailable.
 
----
+**Dank City** is a London-themed FiveM roleplay server on GTA V Enhanced, developed by a three-person team. Work includes a custom framework, resource integration, in-game interfaces and synchronised radio. Preflight validates syntax, dependencies, assets and map streaming extents; resource tests cover individual components.
 
-### Viewarr
+All three repositories are private. Check results refer to the current default-branch commit at collection time, not deployed versions.
 
-A media server built in Go and Next.js, covering library scanning, metadata, playback, transcoding, subtitles and watch history. Designed to preserve the catalogue when media storage becomes unavailable.
-
-<sub>Go · Next.js · SQLite · FFmpeg &nbsp; / &nbsp; Source private</sub>
-
----
-
-### Dank City
-
-A London-themed FiveM roleplay server on GTA V Enhanced, developed by a three-person team. Custom framework, resource integration, in-game interfaces and synchronised radio.
-
-Its **Preflight** tooling validates syntax, dependencies, assets and map streaming extents on every pull request.
-
-<sub>Lua · Python · GitHub Actions &nbsp; / &nbsp; Source private</sub>
+</details>
 
 <br>
 
-## Homelab pulse
+### [MailTools in use ↗](https://mailtools.hashemlabs.com)
 
-Service health and automation activity from the latest published snapshot.
+[![MailTools Domain Audit showing SPF, DKIM and DMARC checks for example.com](assets/mailtools-audit.png)](https://mailtools.hashemlabs.com)
+
+<sub>Domain Audit · example.com · public interface, captured November 2026</sub>
+
+<br>
 
 <!-- pulse:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark-mobile.svg?v=2-20261106040000">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=2-20261106040000">
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light-mobile.svg?v=2-20261106040000">
-  <img alt="Homelab pulse: service health, automation runs, execution success and deployments; collection time shown in the panel" src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=2-20261106040000" width="840">
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark-mobile.svg?v=3-c8424169910b">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=3-c8424169910b">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light-mobile.svg?v=3-c8424169910b">
+  <img alt="Aggregate running container counts and completed automation runs. Dates shown in panel." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=3-c8424169910b" width="840">
 </picture>
 <!-- pulse:end -->
 
 <details>
-<summary>About these numbers</summary>
+<summary>About the data</summary>
 
-The snapshot records healthy services, automation runs, execution success rate and deployments. Activity figures cover the preceding seven days; the timestamp shows when the data was collected.
+Project activity counts merged pull requests across the three selected projects over 30 complete UTC days. Bot-authored pull requests and this profile's automated updates are excluded. Direct commits, builds and deployments are not counted as merged pull requests.
 
-[Renderer](https://github.com/chaosen3/chaosen3/blob/main/scripts/render_pulse.py) · [Snapshot](https://github.com/chaosen3/chaosen3/blob/main/data/pulse.json)
+Checks cover MailTools' build, browser and container-image tests, and Dank City's Preflight and Resource Tests. Viewarr currently has no recorded CI checks. Results are tied to the current default-branch commit. Missing or incomplete records never become a passing result or a zero count.
+
+The infrastructure snapshot counts **running containers**, not healthy applications or uptime. Automation counts completed production executions over seven complete UTC days, excluding this collector and manual runs. A success rate is shown only when there are completed runs.
+
+Sources update daily. Failed collections retain dated last-known project or container values; snapshots older than 48 hours lose their current status. Only approved project dates, check results and aggregate counts are published.
+
+[Renderer](scripts/render_profile.py) · [Snapshot](data/pulse.json)
 
 </details>
-
