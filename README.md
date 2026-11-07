@@ -35,14 +35,6 @@ All three repositories are private. Check results refer to the current default-b
 
 <br>
 
-## Public code and notes
-
-**[scan-guard](https://github.com/chaosen3/scan-guard)** · A small Go package and CLI that refuses incomplete scans and unexpected empty results before inventory reconciliation. Adapted from Viewarr.
-
-[Why an empty scan should not clear a catalogue](https://github.com/chaosen3/scan-guard/blob/main/docs/empty-scans.md) · The failure mode, the guard and its trade-offs.
-
-<br>
-
 ### [Viewarr demo ↗](demos/viewarr/README.md)
 
 [![Viewarr’s movie library with fictional titles and procedural artwork](assets/viewarr-library.png)](demos/viewarr/README.md)
