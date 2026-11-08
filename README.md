@@ -13,19 +13,21 @@ AI and automation engineer with a background in Microsoft 365, infrastructure an
 
 <!-- projects:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark-mobile.svg?v=3-b78eee753cec">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark.svg?v=3-b78eee753cec">
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light-mobile.svg?v=3-b78eee753cec">
-  <img alt="MailTools, Viewarr and Dank City: project checks and 30 days of merged pull requests." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light.svg?v=3-b78eee753cec" width="840">
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark-mobile.svg?v=3-a1745ab7296d">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark.svg?v=3-a1745ab7296d">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light-mobile.svg?v=3-a1745ab7296d">
+  <img alt="MailTools, Viewarr and Dank City: selected work and dated project checks." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light.svg?v=3-a1745ab7296d" width="840">
 </picture>
 <!-- projects:end -->
+
+**[FiveM Enhanced for Linux ↗](https://github.com/chaosen3/fivem-enhanced-docker)** · Public Docker/Compose starter with txAdmin, MariaDB and documented startup and update behaviour. Extracted from the setup behind Dank City.
 
 <details>
 <summary>Project notes</summary>
 
 **[MailTools](https://mailtools.hashemlabs.com)** covers email deliverability and DNS diagnostics, report ingestion, monitoring and alerting. Its reasoning engine explains deterministic checks, with a 31-case evaluation harness for those explanations.
 
-**Viewarr** owns library scanning, metadata, playback, transcoding, subtitles and watch history. It preserves the catalogue when media storage becomes unavailable.
+**Viewarr** owns library scanning, metadata, playback, transcoding, subtitles and watch history. Manual metadata and artwork choices survive refreshes; the catalogue is preserved when media storage becomes unavailable.
 
 **Dank City** is a London-themed FiveM roleplay server on GTA V Enhanced, developed by a three-person team. Work includes a custom framework, resource integration, in-game interfaces and synchronised radio. Preflight validates syntax, dependencies, assets and map streaming extents; resource tests cover individual components.
 
@@ -39,7 +41,7 @@ All three repositories are private. Check results refer to the current default-b
 
 [![Viewarr’s movie library with fictional titles and procedural artwork](assets/viewarr-library.png)](demos/viewarr/README.md)
 
-<sub>Browse, filter and resume · synthetic library · simulated playback · [watch the demo](demos/viewarr/README.md)</sub>
+<sub>Edit details, choose artwork and keep your changes · synthetic demo · [watch the tour](demos/viewarr/README.md) · [engineering note](demos/viewarr/keeping-manual-edits.md)</sub>
 
 <br>
 
@@ -64,7 +66,7 @@ All three repositories are private. Check results refer to the current default-b
 <details>
 <summary>About the data</summary>
 
-Project activity counts merged pull requests across the three selected projects over 30 complete UTC days. Bot-authored pull requests and this profile's automated updates are excluded. Direct commits, builds and deployments are not counted as merged pull requests.
+The project panel shows dated checks and source updates. The underlying snapshot also retains 30-day merged-PR counts, excluding bots; these are not shown as a measure of progress because projects use different workflows, including direct commits.
 
 Checks cover MailTools' build, browser and container-image tests, and Dank City's Preflight and Resource Tests. Viewarr currently has no recorded CI checks. Results are tied to the current default-branch commit. Missing or incomplete records never become a passing result or a zero count.
 

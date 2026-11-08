@@ -20,17 +20,18 @@ class RenderTests(unittest.TestCase):
   for theme in render.THEMES:
    for mobile in (False,True):
     svg=render.project_card(payload(),theme,mobile);ET.fromstring(svg)
-    self.assertIn('90 · 30 days',svg);self.assertIn('Checks passed',svg)
+    self.assertNotIn('Merged pull requests',svg);self.assertNotIn('90 · 30 days',svg);self.assertIn('Checks passed',svg)
     svg=render.card(payload(),theme,mobile);ET.fromstring(svg)
     self.assertIn('5 / 7 containers running',svg);self.assertNotIn('healthy',svg);self.assertNotIn('100%',svg);self.assertNotIn('Deployments',svg)
  def test_old_or_missing_sources_never_look_current(self):
   d=payload();d['projects'][0]['observed_at']=(NOW-timedelta(days=3)).isoformat();d['infrastructure']['status']='unavailable'
-  svg=render.project_card(d,'dark');self.assertIn('Last known',svg);self.assertIn('Activity unavailable',svg);self.assertNotIn('90 · 30 days',svg)
+  svg=render.project_card(d,'dark');self.assertIn('Last known',svg);self.assertNotIn('90 · 30 days',svg)
   self.assertIn('Last known',render.card(d,'dark'))
   self.assertNotIn('Checks passed',render.project_card({},'dark'))
- def test_incomplete_mismatched_or_invalid_series_are_unavailable(self):
-  for modify in [lambda p:p.update(activity_complete=False),lambda p:p.update(window_end='2026-11-04'),lambda p:p.update(daily_merges=[None]*30)]:
-   d=payload();modify(d['projects'][1]);self.assertIn('Activity unavailable',render.project_card(d,'light'))
+ def test_project_checks_do_not_depend_on_pr_activity(self):
+  original=render.project_card(payload(),'light')
+  for modify in [lambda p:p.update(activity_complete=False),lambda p:p.update(window_end='2026-11-04'),lambda p:p.update(daily_merges=[None]*30),lambda p:p.update(daily_merges=[9999]*30)]:
+   d=payload();modify(d['projects'][1]);self.assertEqual(original,render.project_card(d,'light'))
  def test_only_markers_replaced_and_render_is_stable(self):
   with tempfile.TemporaryDirectory() as folder:
    root=Path(folder);data=root/'pulse.json';readme=root/'README.md';assets=root/'assets'

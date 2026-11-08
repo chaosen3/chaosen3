@@ -4,7 +4,7 @@ import hashlib
 import json
 import math
 import re
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 
@@ -45,8 +45,8 @@ def start(w,h,title,desc,t):
 
 def project_card(d,theme,mobile=False):
  t=THEMES[theme];w=420 if mobile else 840
- row=172 if mobile else 103;chart=3*row+28;h=chart+134
- parts=start(w,h,'Selected work','Three selected projects, current-commit checks and 30 days of merged pull requests.',t)
+ row=172 if mobile else 103;h=3*row+24
+ parts=start(w,h,'Selected work','Three selected projects with dated current-commit checks.',t)
  rows={p.get('id'):p for p in d.get('projects',[]) if isinstance(p,dict)}
  for i,(key,name,description,stack,check_label) in enumerate(PROJECTS):
   p=rows.get(key,{});y=i*row+26
@@ -61,24 +61,7 @@ def project_card(d,theme,mobile=False):
   milestone=('Updated '+date(p['updated'])+' · observed '+date(p.get('observed_at'))) if p.get('updated') else 'Project data unavailable'
   parts.append(text(x,sy+40,milestone,t['muted'],14 if mobile else 11))
   parts.append(f'<path d="M0 {(i+1)*row}H{w}" stroke="{t["line"]}"/>')
- complete=all(fresh(rows.get(key,{})) and rows[key].get('activity_complete') and isinstance(rows[key].get('daily_merges'),list) and len(rows[key]['daily_merges'])==30 and all(count(n) is not None for n in rows[key]['daily_merges']) for key,*_ in PROJECTS)
- windows={(rows.get(key,{}).get('window_start'),rows.get(key,{}).get('window_end')) for key,*_ in PROJECTS}
- complete=complete and len(windows)==1
- parts.append(text(0,chart,'Merged pull requests',t['text'],17 if mobile else 15,600))
- if complete:
-  values=[sum(rows[key]['daily_merges'][i] for key,*_ in PROJECTS) for i in range(30)]
-  parts.append(text(w,chart,f'{sum(values)} · 30 days',t['muted'],14 if mobile else 12,anchor='end'))
-  peak=max(values) or 1;step=w/30;base=chart+66
-  for i,n in enumerate(values):
-   x=i*step;height=n/peak*42
-   parts.append(f'<rect x="{x:.2f}" y="{base}" width="{step-4:.2f}" height="1" fill="{t["line"]}"/>')
-   if n:
-    day=(datetime.fromisoformat(rows['mailtools']['window_start'])+timedelta(days=i)).date()
-    parts.append(f'<rect x="{x:.2f}" y="{base-height:.2f}" width="{step-4:.2f}" height="{height:.2f}" rx="1" fill="{t["accent"]}"><title>{day}: {n} merged pull requests</title></rect>')
-  a,b=next(iter(windows))
-  parts += [text(0,base+21,date(a),t['muted'],13 if mobile else 11),text(w,base+21,date(b),t['muted'],13 if mobile else 11,anchor='end')]
- else: parts.append(text(0,chart+48,'Activity unavailable · awaiting a complete snapshot',t['muted'],12))
- parts.append(text(0,h-8,'Three selected projects · bot-authored PRs excluded',t['muted'],13 if mobile else 11))
+ parts.append(text(0,h-4,'Private repositories · dated checks, not deployment status',t['muted'],13 if mobile else 11))
  return '\n'.join(parts+['</svg>'])+'\n'
 
 def card(d,theme,mobile=False):
@@ -123,7 +106,7 @@ def main():
   a,b=f'<!-- {name}:start -->',f'<!-- {name}:end -->'
   if content.count(a)!=1 or content.count(b)!=1 or content.index(a)>content.index(b): raise ValueError('Missing or repeated '+name+' markers')
  ASSETS.mkdir(exist_ok=True)
- for name,renderer,alt in [('projects',project_card,'MailTools, Viewarr and Dank City: project checks and 30 days of merged pull requests.'),('pulse',card,'Aggregate running container counts and completed automation runs. Dates shown in panel.')]:
+ for name,renderer,alt in [('projects',project_card,'MailTools, Viewarr and Dank City: selected work and dated project checks.'),('pulse',card,'Aggregate running container counts and completed automation runs. Dates shown in panel.')]:
   variants=[]
   for theme in THEMES:
    for mobile in (False,True):
