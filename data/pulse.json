@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-11-09T04:00:00Z",
+  "generated_at": "2026-11-10T04:00:00Z",
   "projects": [
     {
       "id": "mailtools",
       "status": "current",
-      "observed_at": "2026-11-09T03:00:00Z",
+      "observed_at": "2026-11-10T03:00:00Z",
       "updated": "2026-11-08",
       "last_merge": "2026-11-08",
       "checks": "passing",
@@ -39,19 +39,19 @@
         0,
         0,
         0,
-        0,
         4,
         10,
-        4
+        4,
+        0
       ],
-      "window_start": "2026-10-10",
-      "window_end": "2026-11-08"
+      "window_start": "2026-10-11",
+      "window_end": "2026-11-09"
     },
     {
       "id": "viewarr",
       "status": "current",
-      "observed_at": "2026-11-09T03:00:00Z",
-      "updated": "2026-11-09",
+      "observed_at": "2026-11-10T03:00:00Z",
+      "updated": "2026-11-10",
       "last_merge": null,
       "checks": "not_recorded",
       "checks_date": null,
@@ -89,21 +89,20 @@
         0,
         0
       ],
-      "window_start": "2026-10-10",
-      "window_end": "2026-11-08"
+      "window_start": "2026-10-11",
+      "window_end": "2026-11-09"
     },
     {
       "id": "dankcity",
       "status": "current",
-      "observed_at": "2026-11-09T03:00:00Z",
-      "updated": "2026-11-01",
-      "last_merge": "2026-11-01",
+      "observed_at": "2026-11-10T03:00:00Z",
+      "updated": "2026-11-09",
+      "last_merge": "2026-11-09",
       "checks": "passing",
-      "checks_date": "2026-11-01",
+      "checks_date": "2026-11-09",
       "activity_complete": true,
-      "merged_prs_30d": 171,
+      "merged_prs_30d": 160,
       "daily_merges": [
-        15,
         8,
         30,
         8,
@@ -132,24 +131,25 @@
         0,
         0,
         0,
-        0
+        0,
+        4
       ],
-      "window_start": "2026-10-10",
-      "window_end": "2026-11-08"
+      "window_start": "2026-10-11",
+      "window_end": "2026-11-09"
     }
   ],
   "infrastructure": {
     "status": "current",
-    "observed_at": "2026-11-09T04:00:00Z",
-    "containers_running": 54,
-    "containers_total": 54
+    "observed_at": "2026-11-10T04:00:00Z",
+    "containers_running": 58,
+    "containers_total": 58
   },
   "automation": {
     "status": "current",
-    "observed_at": "2026-11-09T04:00:00Z",
+    "observed_at": "2026-11-10T04:00:00Z",
     "completed_runs_7d": 0,
     "successful_runs_7d": 0,
-    "window_start": "2026-11-02",
-    "window_end": "2026-11-08"
+    "window_start": "2026-11-03",
+    "window_end": "2026-11-09"
   }
 }
