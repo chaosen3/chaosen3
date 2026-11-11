@@ -3,8 +3,8 @@
 <desc id="desc">Running container counts, not application health or uptime.</desc>
 <rect width="840" height="100" fill="#0d1117"/>
 <path d="M0 1H840" stroke="#303b49"/>
-<text x="0" y="30" fill="#ecf2f8" font-size="15" font-weight="600" text-anchor="start">58 / 58 containers running</text>
-<text x="0" y="52" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">Observed 10 Nov 2026 · daily snapshot</text>
-<text x="840" y="30" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="end">0 completed automation runs · 7 days</text>
+<text x="0" y="30" fill="#ecf2f8" font-size="15" font-weight="600" text-anchor="start">54 / 54 containers running</text>
+<text x="0" y="52" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">Observed 11 Nov 2026 · daily snapshot</text>
+<text x="840" y="30" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="end">23 completed automation runs · 7 days · 100% successful</text>
 <text x="0" y="84" fill="#99a8b9" font-size="11" font-weight="400" text-anchor="start">Container state only; no health or uptime claim.</text>
 </svg>
