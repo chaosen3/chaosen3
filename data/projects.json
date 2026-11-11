@@ -4,15 +4,14 @@
     {
       "id": "mailtools",
       "status": "current",
-      "observed_at": "2026-11-10T03:00:00Z",
-      "updated": "2026-11-08",
-      "last_merge": "2026-11-08",
+      "observed_at": "2026-11-11T03:00:00Z",
+      "updated": "2026-11-11",
+      "last_merge": "2026-11-11",
       "checks": "passing",
-      "checks_date": "2026-11-08",
+      "checks_date": "2026-11-11",
       "activity_complete": true,
-      "merged_prs_30d": 18,
+      "merged_prs_30d": 22,
       "daily_merges": [
-        0,
         0,
         0,
         0,
@@ -41,15 +40,16 @@
         4,
         10,
         4,
-        0
+        0,
+        4
       ],
-      "window_start": "2026-10-11",
-      "window_end": "2026-11-09"
+      "window_start": "2026-10-12",
+      "window_end": "2026-11-10"
     },
     {
       "id": "viewarr",
       "status": "current",
-      "observed_at": "2026-11-10T03:00:00Z",
+      "observed_at": "2026-11-11T03:00:00Z",
       "updated": "2026-11-10",
       "last_merge": null,
       "checks": "not_recorded",
@@ -88,21 +88,20 @@
         0,
         0
       ],
-      "window_start": "2026-10-11",
-      "window_end": "2026-11-09"
+      "window_start": "2026-10-12",
+      "window_end": "2026-11-10"
     },
     {
       "id": "dankcity",
       "status": "current",
-      "observed_at": "2026-11-10T03:00:00Z",
-      "updated": "2026-11-09",
-      "last_merge": "2026-11-09",
+      "observed_at": "2026-11-11T03:00:00Z",
+      "updated": "2026-11-10",
+      "last_merge": "2026-11-10",
       "checks": "passing",
-      "checks_date": "2026-11-09",
+      "checks_date": "2026-11-10",
       "activity_complete": true,
-      "merged_prs_30d": 160,
+      "merged_prs_30d": 154,
       "daily_merges": [
-        8,
         30,
         8,
         15,
@@ -131,10 +130,11 @@
         0,
         0,
         0,
-        4
+        4,
+        2
       ],
-      "window_start": "2026-10-11",
-      "window_end": "2026-11-09"
+      "window_start": "2026-10-12",
+      "window_end": "2026-11-10"
     }
   ]
 }
