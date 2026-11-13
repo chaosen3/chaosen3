@@ -13,10 +13,10 @@ AI and automation engineer with a background in Microsoft 365, infrastructure an
 
 <!-- projects:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark-mobile.svg?v=3-d726ea82a42d">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark.svg?v=3-d726ea82a42d">
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light-mobile.svg?v=3-d726ea82a42d">
-  <img alt="MailTools, Viewarr and Dank City: selected work and dated project checks." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light.svg?v=3-d726ea82a42d" width="840">
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark-mobile.svg?v=3-0493b9ad79d9">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-dark.svg?v=3-0493b9ad79d9">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light-mobile.svg?v=3-0493b9ad79d9">
+  <img alt="MailTools, Viewarr and Dank City: selected work and dated project checks." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/projects-light.svg?v=3-0493b9ad79d9" width="840">
 </picture>
 <!-- projects:end -->
 
@@ -56,10 +56,10 @@ All three repositories are private. Check results refer to the current default-b
 
 <!-- pulse:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark-mobile.svg?v=3-0bd9f476b267">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=3-0bd9f476b267">
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light-mobile.svg?v=3-0bd9f476b267">
-  <img alt="Aggregate running container counts and completed automation runs. Dates shown in panel." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=3-0bd9f476b267" width="840">
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark-mobile.svg?v=3-2b836f9de9cf">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-dark.svg?v=3-2b836f9de9cf">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light-mobile.svg?v=3-2b836f9de9cf">
+  <img alt="Aggregate running container counts and completed automation runs. Dates shown in panel." src="https://raw.githubusercontent.com/chaosen3/chaosen3/main/assets/pulse-light.svg?v=3-2b836f9de9cf" width="840">
 </picture>
 <!-- pulse:end -->
 

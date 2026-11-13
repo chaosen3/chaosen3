@@ -4,8 +4,7 @@
 <rect width="420" height="165" fill="#0d1117"/>
 <path d="M0 1H420" stroke="#303b49"/>
 <text x="0" y="30" fill="#ecf2f8" font-size="15" font-weight="600" text-anchor="start">54 / 54 containers running</text>
-<text x="0" y="52" fill="#99a8b9" font-size="13" font-weight="400" text-anchor="start">Observed 12 Nov 2026 · daily snapshot</text>
-<text x="0" y="108" fill="#99a8b9" font-size="13" font-weight="400" text-anchor="start">100% successful</text>
-<text x="0" y="85" fill="#99a8b9" font-size="13" font-weight="400" text-anchor="start">1428 completed automation runs · 7 days</text>
+<text x="0" y="52" fill="#99a8b9" font-size="13" font-weight="400" text-anchor="start">Observed 13 Nov 2026 · daily snapshot</text>
+<text x="0" y="85" fill="#99a8b9" font-size="13" font-weight="400" text-anchor="start">Automation data unavailable</text>
 <text x="0" y="149" fill="#99a8b9" font-size="13" font-weight="400" text-anchor="start">Container state only; no health or uptime claim.</text>
 </svg>
