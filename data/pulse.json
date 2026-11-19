@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-11-18T04:00:00Z",
+  "generated_at": "2026-11-19T04:00:00Z",
   "projects": [
     {
       "id": "mailtools",
       "status": "current",
-      "observed_at": "2026-11-18T03:00:00Z",
+      "observed_at": "2026-11-19T03:00:00Z",
       "updated": "2026-11-15",
       "last_merge": "2026-11-15",
       "checks": "passing",
@@ -30,7 +30,6 @@
         0,
         0,
         0,
-        0,
         4,
         10,
         4,
@@ -41,16 +40,17 @@
         4,
         3,
         10,
+        0,
         0,
         0
       ],
-      "window_start": "2026-10-19",
-      "window_end": "2026-11-17"
+      "window_start": "2026-10-20",
+      "window_end": "2026-11-18"
     },
     {
       "id": "viewarr",
       "status": "current",
-      "observed_at": "2026-11-18T03:00:00Z",
+      "observed_at": "2026-11-19T03:00:00Z",
       "updated": "2026-11-16",
       "last_merge": null,
       "checks": "not_recorded",
@@ -89,21 +89,20 @@
         0,
         0
       ],
-      "window_start": "2026-10-19",
-      "window_end": "2026-11-17"
+      "window_start": "2026-10-20",
+      "window_end": "2026-11-18"
     },
     {
       "id": "dankcity",
       "status": "current",
-      "observed_at": "2026-11-18T03:00:00Z",
+      "observed_at": "2026-11-19T03:00:00Z",
       "updated": "2026-11-15",
       "last_merge": "2026-11-15",
       "checks": "passing",
       "checks_date": "2026-11-15",
       "activity_complete": true,
-      "merged_prs_30d": 46,
+      "merged_prs_30d": 43,
       "daily_merges": [
-        3,
         0,
         1,
         4,
@@ -132,15 +131,16 @@
         0,
         1,
         0,
+        0,
         0
       ],
-      "window_start": "2026-10-19",
-      "window_end": "2026-11-17"
+      "window_start": "2026-10-20",
+      "window_end": "2026-11-18"
     }
   ],
   "infrastructure": {
     "status": "current",
-    "observed_at": "2026-11-18T04:00:00Z",
+    "observed_at": "2026-11-19T04:00:00Z",
     "containers_running": 55,
     "containers_total": 55
   },
