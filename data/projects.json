@@ -4,7 +4,7 @@
     {
       "id": "mailtools",
       "status": "current",
-      "observed_at": "2026-11-24T03:00:00Z",
+      "observed_at": "2026-11-25T03:00:00Z",
       "updated": "2026-11-15",
       "last_merge": "2026-11-15",
       "checks": "passing",
@@ -23,7 +23,6 @@
         0,
         0,
         0,
-        0,
         4,
         10,
         4,
@@ -34,6 +33,7 @@
         4,
         3,
         10,
+        0,
         0,
         0,
         0,
@@ -43,13 +43,13 @@
         0,
         0
       ],
-      "window_start": "2026-10-25",
-      "window_end": "2026-11-23"
+      "window_start": "2026-10-26",
+      "window_end": "2026-11-24"
     },
     {
       "id": "viewarr",
       "status": "current",
-      "observed_at": "2026-11-24T03:00:00Z",
+      "observed_at": "2026-11-25T03:00:00Z",
       "updated": "2026-11-16",
       "last_merge": null,
       "checks": "not_recorded",
@@ -88,21 +88,20 @@
         0,
         0
       ],
-      "window_start": "2026-10-25",
-      "window_end": "2026-11-23"
+      "window_start": "2026-10-26",
+      "window_end": "2026-11-24"
     },
     {
       "id": "dankcity",
       "status": "current",
-      "observed_at": "2026-11-24T03:00:00Z",
+      "observed_at": "2026-11-25T03:00:00Z",
       "updated": "2026-11-15",
       "last_merge": "2026-11-15",
       "checks": "passing",
       "checks_date": "2026-11-15",
       "activity_complete": true,
-      "merged_prs_30d": 38,
+      "merged_prs_30d": 20,
       "daily_merges": [
-        18,
         6,
         4,
         0,
@@ -131,10 +130,11 @@
         0,
         0,
         0,
+        0,
         0
       ],
-      "window_start": "2026-10-25",
-      "window_end": "2026-11-23"
+      "window_start": "2026-10-26",
+      "window_end": "2026-11-24"
     }
   ]
 }
